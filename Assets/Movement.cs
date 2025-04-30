@@ -18,26 +18,27 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A)) 
+        if (Input.GetKey(KeyCode.A))
         {
             Vector3 currentRotation = transform.eulerAngles;
             currentRotation.y -= rotationSpeed * Time.deltaTime;
             transform.eulerAngles = currentRotation;
         }
-        if (Input.GetKey(KeyCode.D)) 
+        if (Input.GetKey(KeyCode.D))
         {
             Vector3 currentRotation = transform.eulerAngles;
             currentRotation.y += rotationSpeed * Time.deltaTime;
             transform.eulerAngles = currentRotation;
         }
+
         if (Input.GetKey(KeyCode.W))
         {
-            rb.velocity = transform.forward * speed;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Rotate(-Vector3.up * speed * Time.deltaTime);
+            rb.AddForce(rb.transform.forward * speed);
         }
 
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(-rb.transform.forward * speed);
+        }
     }
 }
