@@ -20,11 +20,15 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A)) 
         {
-            transform.Rotate(-Vector3.up * rotationSpeed * Time.deltaTime);
+            Vector3 currentRotation = transform.eulerAngles;
+            currentRotation.y -= rotationSpeed * Time.deltaTime;
+            transform.eulerAngles = currentRotation;
         }
         if (Input.GetKey(KeyCode.D)) 
         {
-            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+            Vector3 currentRotation = transform.eulerAngles;
+            currentRotation.y += rotationSpeed * Time.deltaTime;
+            transform.eulerAngles = currentRotation;
         }
         if (Input.GetKey(KeyCode.W))
         {
