@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,8 +134,8 @@ GameObject:
   - component: {fileID: 237592488}
   - component: {fileID: 237592487}
   - component: {fileID: 237592486}
-  m_Layer: 0
-  m_Name: Plane
+  m_Layer: 10
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 516e6f11e8de6624eb6be4bac8c14555, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -251,6 +250,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d0fd0a0357aa446b8d01cdd24d76cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  groundDrag: 5
   speed: 10
   rotationSpeed: 100
 --- !u!114 &796420425
@@ -1081,7 +1085,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965016402889850567, guid: 8a9dcc56240d18c408aff6fd394f1650, type: 3}
       propertyPath: m_AngularDrag
-      value: 100000000
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3965016402889850567, guid: 8a9dcc56240d18c408aff6fd394f1650, type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [Header("Ground Check")]
+    public float playerHeight;
+    public LayerMask whatIsGround;
+    bool grounded;
+
+    public float groundDrag;
     public float speed = 1;
     public float rotationSpeed = 100;
     Rigidbody rb;
@@ -39,6 +45,29 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             rb.AddForce(-rb.transform.forward * speed);
+        }
+
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        
+        if (grounded) 
+        {
+            rb.drag = groundDrag;
+
+        } 
+        else
+        {
+            rb.drag = 0;
+        }
+        
+        SpeedControl();
+    }
+
+    private void SpeedControl() {
+        Vector3 flatVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        if (flatVelocity.magnitude > speed) {
+            Vector3 limitedVelocity = flatVelocity.normalized * speed;
+            rb.velocity = new Vector3(limitedVelocity.x, rb.velocity.y, limitedVelocity.z);
         }
     }
 }
