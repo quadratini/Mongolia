@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -255,7 +256,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   groundDrag: 5
-  speed: 10
+  speed: 20
   rotationSpeed: 100
   jumpForce: 10
 --- !u!114 &796420425
@@ -272,6 +273,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam1: {fileID: 827374440}
   cam2: {fileID: 1801832261}
+--- !u!114 &796420426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796420417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40426bdc233cb7840a8697c8af17d5d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 2228132190579721383, guid: f7b85ea0c61c95643b5cc7fb1e1fb9c0, type: 3}
+  pissOffset: 0.6
 --- !u!1 &827374440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,6 +1123,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2179440766846775505, guid: 8a9dcc56240d18c408aff6fd394f1650, type: 3}
       insertIndex: -1
       addedObject: {fileID: 796420425}
+    - targetCorrespondingSourceObject: {fileID: 2179440766846775505, guid: 8a9dcc56240d18c408aff6fd394f1650, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 796420426}
   m_SourcePrefab: {fileID: 100100000, guid: 8a9dcc56240d18c408aff6fd394f1650, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
