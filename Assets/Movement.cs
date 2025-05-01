@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public float groundDrag;
     public float speed = 1;
     public float rotationSpeed = 100;
+    public float jumpForce = 10;
     Rigidbody rb;
 
     // Start is called before the first frame update
@@ -46,6 +47,14 @@ public class Movement : MonoBehaviour
         {
             rb.AddForce(-rb.transform.forward * speed);
         }
+
+        if (Input.GetKey(KeyCode.Space) && grounded)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            grounded = false;
+        }
+
+        Debug.Log(rb.velocity);
 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
         

@@ -257,6 +257,7 @@ MonoBehaviour:
   groundDrag: 5
   speed: 10
   rotationSpeed: 100
+  jumpForce: 10
 --- !u!114 &796420425
 MonoBehaviour:
   m_ObjectHideFlags: 0
