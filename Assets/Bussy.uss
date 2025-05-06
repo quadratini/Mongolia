@@ -1,0 +1,18 @@
+.health-bar-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 20px;
+    background-color: #222;
+    border-radius: 5px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.health-fill {
+    height: 100%;
+    width: 100%; /* initial */
+    background-color: red;
+    border-radius: 5px;
+}

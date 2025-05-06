@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Bussy.uss?fileID=7433441132597879392&amp;guid=3a645c528ebe0cf4b930471928bd9b36&amp;type=3#Bussy" />
+    <ui:VisualElement name="root">
+        <ui:VisualElement name="healthBarContainer" class="health-bar-container">
+            <ui:VisualElement name="healthFill" class="health-fill" />
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="healthText" style="position: absolute; width: 100%; height: 100%; -unity-text-align: middle-center;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
