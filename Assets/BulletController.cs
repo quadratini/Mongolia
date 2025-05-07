@@ -5,11 +5,14 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     public Vector3 direction;
-    public float speed = 10;
+    public float baseSpeed = 1;
     Rigidbody rb;
+    public float speed;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
     public void SetDirection(Vector3 direction)
     {
@@ -21,8 +24,8 @@ public class BulletController : MonoBehaviour
     {
         if (direction != null)
         {
-            //rb.velocity = direction * speed;
-            rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
+            double num = Random.Range(0.001f, 1f);
+            rb.velocity = new Vector3(direction.x * (float)(baseSpeed * num), rb.velocity.y, direction.z * (float)(baseSpeed * num));
         }
     }
 }
