@@ -120,7 +120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
+  baseSpeed: 1
   speed: 10
+  lifeSpan: 150
 --- !u!54 &-1075812544858214498
 Rigidbody:
   m_ObjectHideFlags: 0

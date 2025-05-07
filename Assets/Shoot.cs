@@ -22,6 +22,8 @@ public class Shoot : MonoBehaviour
             BulletController bulletController = bullet.GetComponent<BulletController>();
             bulletController.SetDirection(transform.forward);
             bulletController.speed = bulletController.baseSpeed * Random.Range(0.05f, 1.0f);
+
         }
     }
+
 }
