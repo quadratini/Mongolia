@@ -21,6 +21,9 @@ public class BirdScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K) && birdIsAlive) {
             birdRigidBody.velocity = Vector2.up * jumpForce;
         }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            logic.restartGame();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
