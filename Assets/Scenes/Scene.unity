@@ -1003,6 +1003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1162609138}
+  - component: {fileID: 1162609139}
   m_Layer: 0
   m_Name: Game Controller
   m_TagString: Untagged
@@ -1025,6 +1026,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1162609139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162609137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d060dedcc4e6b040aa561a077e0d19e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: normal
+  canvas: {fileID: 1230427971}
 --- !u!1 &1221871660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1247,7 @@ RectTransform:
   m_Children:
   - {fileID: 1609082189}
   - {fileID: 1871145685}
-  m_Father: {fileID: 1555763546}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1349,6 +1364,7 @@ MonoBehaviour:
   playerScore: 0
   scoreText: {fileID: 1609082190}
   gameOverScreen: {fileID: 1871145684}
+  bird: {fileID: 1884405810}
 --- !u!1 &1537697650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1391,7 @@ Transform:
   m_GameObject: {fileID: 1537697650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: 44.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1430,7 +1446,6 @@ Transform:
   - {fileID: 1884405808}
   - {fileID: 1294782277}
   - {fileID: 1221871661}
-  - {fileID: 1230427972}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1560031899
@@ -2155,7 +2170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdRigidBody: {fileID: 1884405809}
   jumpForce: 20
-  logic: {fileID: 0}
+  logic: {fileID: 1294782278}
   birdIsAlive: 1
 --- !u!58 &1884405811
 CircleCollider2D:
@@ -2351,5 +2366,6 @@ SceneRoots:
   - {fileID: 237592489}
   - {fileID: 1228309233}
   - {fileID: 113554245}
+  - {fileID: 1230427972}
   - {fileID: 1555763546}
   - {fileID: 1162609138}

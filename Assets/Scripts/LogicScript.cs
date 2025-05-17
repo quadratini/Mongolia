@@ -9,12 +9,21 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
+    public BirdScript bird;
+
+    void Start()
+    {
+       bird = bird.GetComponent<BirdScript>();
+    }
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
-        playerScore += scoreToAdd;
-        scoreText.text = playerScore.ToString();
+        if (bird.birdIsAlive) 
+        {
+            playerScore += scoreToAdd;
+            scoreText.text = playerScore.ToString();
+        }
     }
 
     public void restartGame()
